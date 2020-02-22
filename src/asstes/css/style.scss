@@ -1,0 +1,65 @@
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mcc-wrap {
+    position: relative;
+    display: block;
+    height: 743px;
+    width: 1325px;
+    background: url('https://img.zcool.cn/community/016fe957a6e6640000018c1bd92e2b.jpg@2o.jpg');
+    box-sizing: border-box;
+    &.play {
+        background: #000;
+    }
+    #mcc-tool-wrap,
+    #mc-tool-player-progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        background: #000;
+        &.ready {
+            background-image: linear-gradient( 0deg, rgba(0, 0, 0, .3) 30%, rgba(0, 0, 0, 0) 100%);
+        }
+        div {
+            button {
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                outline: 0;
+            }
+            i {
+                &:nth-child(1) {
+                    margin-right: 5px;
+                }
+                color: white;
+                font-size: 24px;
+            }
+        }
+    }
+    #mc-tool-player-progress {
+        margin: 0 10px;
+        height: 5px;
+        bottom: 50px;
+        background: red;
+        z-index: 1;
+        padding: 0;
+        #mc-tool-player-progress-bar {
+            background-color: aqua;
+            width: 0;
+            height: 5px;
+        }
+    }
+}
